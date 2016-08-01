@@ -37,14 +37,14 @@ facing = 1;
 groundAccel = 1.00;
 groundFric  = 2.00;
 airAccel    = 0.75;
-airFric     = 0.01;
+airFric     = 0.10;//0.01
 vxMax       = 4.00;
 vyMax       = 50.0;
 jumpHeight  = 9.00;
-gravNorm    = 0.66;
-gravSlide   = 0.33; 
+gravNorm    = 0.55;//0.66
+gravSlide   = 0.11;//0.33 
 
-clingTime   = 4.0;
+clingTime   = 1.0;//4.0
 
 // Misc ///////////////////////////////////////////////////////////////////////
 
@@ -277,14 +277,14 @@ if ((!cRight &amp;&amp; !cLeft) || onGround) {
 } else if (((kRight &amp;&amp; cLeft) || (kLeft &amp;&amp; cRight)) &amp;&amp; canStick &amp;&amp; !onGround) {
     alarm[0] = clingTime;
     sticking = true; 
-    canStick = false;       
+    canStick = true;//false       
 }
 
 // Handle gravity
 if (!onGround) {
     if ((cLeft || cRight) &amp;&amp; vy &gt;= 0) {
         // Wall slide
-        vy = Approach(vy, vyMax * 0.33, gravSlide);
+        vy = Approach(vy, vyMax * 2.33/*33*/, gravSlide);
     } else {
         // Fall normally
         vy = Approach(vy, vyMax, gravNorm);
@@ -327,8 +327,8 @@ if (kJump &amp;&amp; cLeft &amp;&amp; !onGround) {
                  
     // Wall jump is different when pushing off/towards the wall        
     if (kLeft) {
-        vx = jumpHeight * .75;
-        vy = -jumpHeight * 1.1;
+        vx = jumpHeight * .75;//.75
+        vy = -jumpHeight * .6;//1.1
     } else {
         vx = vxMax;    
         vy = -jumpHeight * 1.1;
@@ -342,8 +342,8 @@ if (kJump &amp;&amp; cLeft &amp;&amp; !onGround) {
                                
     // Wall jump is different when pushing off/towards the wall  
     if (kRight) {
-        vx = -jumpHeight * .75;
-        vy = -jumpHeight * 1.1;
+        vx = -jumpHeight * .75;//.75
+        vy = -jumpHeight * .6;//1.1
     } else {
         vx = -vxMax;    
         vy = -jumpHeight * 1.1;
@@ -353,7 +353,7 @@ if (kJump &amp;&amp; cLeft &amp;&amp; !onGround) {
 // Jump 
 if (kJump) {
     // THIS LINE HAS BEEN EDITED TO ALLOW FOR MULTI JUMPS 
-    if (onGround) {
+    if (onGround) { //(1) for unlimited jumps
         // Fall thru platform
         if (kDown) &amp;&amp; (place_meeting(x, y + 1, oParJumpThru) &amp;&amp; !place_meeting(x, y + 1, oParSolid)) {
                 ++y;
