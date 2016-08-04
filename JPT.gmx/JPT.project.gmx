@@ -38,6 +38,9 @@
     <backgrounds name="level concept">
       <background>background\background0</background>
     </backgrounds>
+    <backgrounds name="tilesets">
+      <background>background\test_tileset</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths">
     <path>paths\pTest0</path>
@@ -84,8 +87,8 @@
     <object>objects\oGrass</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rmTest0</room>
     <room>rooms\rmTest1</room>
+    <room>rooms\rmTest0</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
