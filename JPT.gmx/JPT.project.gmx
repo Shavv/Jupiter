@@ -15,6 +15,7 @@
     <sprites name="Terrain">
       <sprite>sprites\sBlock</sprite>
       <sprite>sprites\sSlope1</sprite>
+      <sprite>sprites\sRailMover1</sprite>
       <sprite>sprites\sRailMover</sprite>
       <sprite>sprites\sBounceMover</sprite>
       <sprite>sprites\sSwitchMoverH</sprite>

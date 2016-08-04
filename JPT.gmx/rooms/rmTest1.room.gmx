@@ -4,11 +4,11 @@
   <width>1200</width>
   <height>800</height>
   <vsnap>4</vsnap>
-  <hsnap>16</hsnap>
+  <hsnap>2</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
-  <colour>8421504</colour>
+  <colour>7307347</colour>
   <showcolour>-1</showcolour>
   <code></code>
   <enableViews>-1</enableViews>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>64</xoffset>
-    <yoffset>541</yoffset>
+    <xoffset>332</xoffset>
+    <yoffset>270</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -64,6 +64,14 @@
     <instance objName="oBlock" x="496" y="600" name="inst_5CACBE28" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="496" y="616" name="inst_268021AB" locked="0" code="" scaleX="1" scaleY="11.5" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="640" y="560" name="inst_BA2C040E" locked="0" code="" scaleX="1" scaleY="15" colour="4294967295" rotation="0"/>
+    <instance objName="oRailTop" x="672" y="420" name="inst_2858E8C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oRail" x="672" y="440" name="inst_42C0092E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oRail" x="672" y="460" name="inst_E5DA1A1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oRail" x="672" y="480" name="inst_2BCDD875" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oRail" x="672" y="500" name="inst_E624218D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oRail" x="672" y="520" name="inst_18817575" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oRailBottom" x="672" y="540" name="inst_2536C200" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oRailMoverV" x="682" y="544" name="inst_060A426F" locked="0" code="vy=1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="test_tileset" x="112" y="688" w="16" h="16" xo="0" yo="16" id="10000024" name="inst_BF06D302" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -446,6 +454,16 @@
     <tile bgName="test_tileset" x="576" y="768" w="16" h="16" xo="0" yo="32" id="10000487" name="inst_9F7CCB0C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="test_tileset" x="576" y="752" w="16" h="16" xo="0" yo="32" id="10000488" name="inst_CE64962D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="test_tileset" x="576" y="736" w="16" h="16" xo="0" yo="32" id="10000489" name="inst_860A43E2" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="test_tileset" x="674" y="536" w="16" h="16" xo="32" yo="32" id="10000490" name="inst_36F854E5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="test_tileset" x="674" y="524" w="16" h="16" xo="32" yo="16" id="10000491" name="inst_7B488693" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="test_tileset" x="674" y="508" w="16" h="16" xo="32" yo="16" id="10000492" name="inst_F55377B2" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="test_tileset" x="674" y="492" w="16" h="16" xo="32" yo="16" id="10000493" name="inst_C090F8CE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="test_tileset" x="674" y="476" w="16" h="16" xo="32" yo="16" id="10000494" name="inst_9BCAA5FB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="test_tileset" x="674" y="460" w="16" h="16" xo="32" yo="16" id="10000495" name="inst_1A8767A6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="test_tileset" x="674" y="456" w="16" h="16" xo="32" yo="16" id="10000496" name="inst_978407CD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="test_tileset" x="674" y="444" w="16" h="16" xo="32" yo="16" id="10000497" name="inst_E5D7B30D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="test_tileset" x="674" y="436" w="16" h="16" xo="32" yo="16" id="10000498" name="inst_F989634C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="test_tileset" x="674" y="428" w="16" h="16" xo="32" yo="0" id="10000499" name="inst_35FBD3AC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
