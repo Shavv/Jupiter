@@ -10,9 +10,11 @@
   <sprites name="sprites">
     <sprite>sprites\sGame</sprite>
     <sprite>sprites\sPlayer</sprite>
+    <sprite>sprites\spr_player</sprite>
     <sprite>sprites\sDust</sprite>
     <sprites name="Terrain">
       <sprite>sprites\sBlock</sprite>
+      <sprite>sprites\sSlope1</sprite>
       <sprite>sprites\sRailMover</sprite>
       <sprite>sprites\sBounceMover</sprite>
       <sprite>sprites\sSwitchMoverH</sprite>
@@ -27,8 +29,16 @@
       <sprite>sprites\sRailLeft</sprite>
     </sprites>
     <sprite>sprites\spr_cam</sprite>
+    <sprites name="Terrain Ingame">
+      <sprite>sprites\deco_esylia_grass</sprite>
+      <sprite>sprites\deco_grass</sprite>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <backgrounds name="level concept">
+      <background>background\background0</background>
+    </backgrounds>
+  </backgrounds>
   <paths name="paths">
     <path>paths\pTest0</path>
   </paths>
@@ -37,6 +47,9 @@
     <script>scripts\OnGround.gml</script>
     <script>scripts\PlaceMeetingException.gml</script>
     <script>scripts\PlatformCheck.gml</script>
+    <script>scripts\shear_step.gml</script>
+    <script>scripts\shear_draw.gml</script>
+    <script>scripts\shear_init.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oGame</object>
@@ -48,6 +61,7 @@
     </objects>
     <objects name="Terrain">
       <object>objects\oBlock</object>
+      <object>objects\oSlope1</object>
       <object>objects\oRailMoverH</object>
       <object>objects\oRailMoverV</object>
       <object>objects\oBounceMover</object>
@@ -67,6 +81,7 @@
     <object>objects\oPlayer</object>
     <object>objects\oCam</object>
     <object>objects\oFxDust</object>
+    <object>objects\oGrass</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmTest0</room>

@@ -38,6 +38,7 @@ xshake    = choose(-1, 1);
 yshake    = choose(-1, 1);
 shakeDist = 2;
 
+
 // Camera offset
 xcamo = 0;
 ycamo = 0;
@@ -68,119 +69,6 @@ ly = 0;
 
 clickInit = mouse_check_button_pressed(mb_left)
 clicked   = mouse_check_button(mb_left);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Turn off screenshake
-
-shake     = false;
-babyshake = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Camera
-
-// Make sure camera is inside room
-view_xview[0] = max(0, min(view_xview[0], room_width  - view_wport[0]));
-view_yview[0] = max(0, min(view_yview[0], room_height - view_hport[0]));      
-
-// Adjust for screenshake
-view_xview[0] += xcamo;
-view_yview[0] += ycamo;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Screenshake
-
-var r;
-
-r = 0;
-
-// Screenshake
-if (shake) {
-    r = choose(-1, 1);
-    
-    if (r) {
-        xcamo = xshake * shakeDist;
-        ycamo = 0;
-        xshake *= -1;
-    } else {
-        xcamo = 0;
-        ycamo = yshake * shakeDist;    
-        yshake *= -1;
-    }
-// Small screenshake
-} else if (babyshake) {
-    r = choose(-1, 1);
-    
-    if (r) {
-        xcamo = xshake * shakeDist * 0.5;
-        ycamo = 0;
-        xshake *= -1;
-    } else {
-        xcamo = 0;
-        ycamo = yshake * shakeDist * 0.5;    
-        yshake *= -1;
-    }
-} else {
-    xcamo = 0;
-    ycamo = 0;
-}
 </string>
           </argument>
         </arguments>
@@ -276,58 +164,6 @@ with (oPathMover) {
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/*
-clickInit = mouse_check_button_pressed(mb_left)
-clicked   = mouse_check_button(mb_left);
-
-// INITIAL POINT
-if (clickInit) {
-    var dirToMouse = point_direction(oPlayer.x, oPlayer.y - 8, mouse_x, mouse_y);
-    
-    // Distance to contact point
-    var i = 0;
-    
-    do {
-        i++    
-    } until (collision_line(oPlayer.x, oPlayer.y - 8, oPlayer.x + lengthdir_x(i, dirToMouse), (oPlayer.y - 8) + lengthdir_y(i, dirToMouse), oParSolid, false, true)); 
-    
-    lx = oPlayer.x + lengthdir_x(i, dirToMouse);
-    ly = (oPlayer.y - 8) + lengthdir_y(i, dirToMouse);
-// SECONDARY POINT(S)
-}// else if (clicked) {
-    var dirToMouse = point_direction(oPlayer.x, oPlayer.y - 8, mouse_x, mouse_y);
-    
-    // Distance to contact point
-    var i = 0;
-    
-    do {
-        i++    
-    } until (collision_line(oPlayer.x, oPlayer.y - 8, oPlayer.x + lengthdir_x(i, dirToMouse), (oPlayer.y - 8) + lengthdir_y(i, dirToMouse), oParSolid, false, true)); 
-    
-    lx = oPlayer.x + lengthdir_x(i, dirToMouse);
-    ly = (oPlayer.y - 8) + lengthdir_y(i, dirToMouse);
-//}
-*/
-</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="7" enumb="4">
       <action>
@@ -378,6 +214,28 @@ ycamo = 0;
 //if (clicked)
     //draw_line(oPlayer.x, oPlayer.y - 8, lx, ly);
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="115">
+      <action>
+        <libid>1</libid>
+        <id>531</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_fullscreen</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
