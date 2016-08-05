@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///(full)screen and cam_move
-global.zoomfactor=3
+global.zoomfactor=1
 global.cam_lock=false
 dh=window_get_height()
 dw=window_get_width()
@@ -82,7 +82,7 @@ view_yview[0] = median(0, view_yview[0], room_height - view_hview[0])
           <argument>
             <kind>1</kind>
             <string>///move towards player
-move_towards_point(oPlayer.x,oPlayer.y,(distance_to_point(oPlayer.x,oPlayer.y)/12)*(global.zoomfactor/2))
+move_towards_point(oPlayer.x,oPlayer.y,(distance_to_point(oPlayer.x,oPlayer.y)/8)/**(global.zoomfactor/2)*/)
 </string>
           </argument>
         </arguments>
@@ -107,16 +107,16 @@ move_towards_point(oPlayer.x,oPlayer.y,(distance_to_point(oPlayer.x,oPlayer.y)/1
 dh=window_get_height()
 dw=window_get_width()
 
-view_wview=dw/global.zoomfactor
-view_hview=dh/global.zoomfactor
+//view_wview=dw/global.zoomfactor
+//view_hview=dh/global.zoomfactor
 //zoom with keys
-if keyboard_check(vk_pageup) or gamepad_button_check_pressed(0,gp_padd)
+if keyboard_check_pressed(vk_pageup) or gamepad_button_check_pressed(0,gp_padd)
 {
- if global.zoomfactor&gt;2 {global.zoomfactor-=0.1}
+ if global.zoomfactor&gt;2 {global.zoomfactor-=0.5}
 }
-if keyboard_check(vk_pagedown) or gamepad_button_check_pressed(0,gp_padu)
+if keyboard_check_pressed(vk_pagedown) or gamepad_button_check_pressed(0,gp_padu)
 {
- if global.zoomfactor&lt;15 {global.zoomfactor+=0.1}
+ if global.zoomfactor&lt;15 {global.zoomfactor+=0.5}
 }
 </string>
           </argument>

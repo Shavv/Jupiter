@@ -41,7 +41,9 @@
     </backgrounds>
     <backgrounds name="tilesets">
       <background>background\test_tileset</background>
+      <background>background\background3</background>
     </backgrounds>
+    <background>background\background2</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pTest0</path>
@@ -56,6 +58,7 @@
     <script>scripts\shear_init.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\oBackground</object>
     <object>objects\oGame</object>
     <objects name="Parents">
       <object>objects\oParEntity</object>
